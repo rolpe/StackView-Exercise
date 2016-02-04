@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Stack_Exercise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +21,99 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="qqd-mA-9iU">
+                                <rect key="frame" x="8" y="10" width="584" height="575"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="B0s-YI-4u4">
+                                        <rect key="frame" x="0.0" y="0.0" width="584" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9e-rs-CKg">
+                                                <rect key="frame" x="0.0" y="0.0" width="584" height="60"/>
+                                                <string key="text">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta</string>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="z9e-rs-CKg" firstAttribute="leading" secondItem="B0s-YI-4u4" secondAttribute="leading" constant="10" id="DFd-O3-isn"/>
+                                            <constraint firstItem="z9e-rs-CKg" firstAttribute="leading" secondItem="B0s-YI-4u4" secondAttribute="leading" constant="10" id="UY1-ft-q7l"/>
+                                            <constraint firstItem="z9e-rs-CKg" firstAttribute="top" secondItem="B0s-YI-4u4" secondAttribute="top" constant="10" id="cIi-zA-zih"/>
+                                            <constraint firstAttribute="trailing" secondItem="z9e-rs-CKg" secondAttribute="trailing" constant="30" id="fsR-CV-1ij"/>
+                                            <constraint firstAttribute="trailing" secondItem="z9e-rs-CKg" secondAttribute="trailing" constant="10" id="qrS-jA-hTd"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="DFd-O3-isn"/>
+                                                <exclude reference="UY1-ft-q7l"/>
+                                                <exclude reference="cIi-zA-zih"/>
+                                                <exclude reference="fsR-CV-1ij"/>
+                                                <exclude reference="qrS-jA-hTd"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kBy-bJ-h7G">
+                                        <rect key="frame" x="0.0" y="90" width="584" height="159"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="QdQ-KG-0ZH">
+                                                <rect key="frame" x="0.0" y="0.0" width="584" height="159"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="M9c-Lc-gee">
+                                        <rect key="frame" x="0.0" y="279" width="584" height="297"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gb6-8b-WtO">
+                                                <rect key="frame" x="0.0" y="0.0" width="182" height="297"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                                <inset key="titleEdgeInsets" minX="-197" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <inset key="imageEdgeInsets" minX="20" minY="10" maxX="20" maxY="30"/>
+                                                <state key="normal" title="Post" image="post"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALX-XP-wbo">
+                                                <rect key="frame" x="202" y="0.0" width="181" height="297"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                                <inset key="titleEdgeInsets" minX="-197" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <inset key="imageEdgeInsets" minX="20" minY="10" maxX="20" maxY="30"/>
+                                                <state key="normal" title="Favorites" image="heart"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZE-lS-8P8">
+                                                <rect key="frame" x="403" y="0.0" width="182" height="297"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                                <inset key="titleEdgeInsets" minX="-197" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <inset key="imageEdgeInsets" minX="20" minY="10" maxX="20" maxY="30"/>
+                                                <state key="normal" title="Mail" image="inbox"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <variation key="heightClass=regular-widthClass=regular" distribution="fillEqually"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qqd-mA-9iU" secondAttribute="bottom" constant="15" id="7fZ-oV-j15"/>
+                            <constraint firstAttribute="trailing" secondItem="qqd-mA-9iU" secondAttribute="trailing" constant="8" id="Glr-ea-h39"/>
+                            <constraint firstItem="qqd-mA-9iU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="JD4-iV-DxT"/>
+                            <constraint firstItem="qqd-mA-9iU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="10" id="QuU-4d-ke6"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="favoritesBtn" destination="ALX-XP-wbo" id="I0o-ek-d1U"/>
+                        <outlet property="mailBtn" destination="SZE-lS-8P8" id="SNK-ZC-1PV"/>
+                        <outlet property="postBtn" destination="gb6-8b-WtO" id="0nF-Bd-rEz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="279" y="319"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="circle" width="192" height="159"/>
+        <image name="heart" width="192" height="159"/>
+        <image name="inbox" width="192" height="159"/>
+        <image name="post" width="192" height="159"/>
+    </resources>
 </document>
